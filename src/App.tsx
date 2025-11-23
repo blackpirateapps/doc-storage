@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  Folder, FileText, Image as ImageIcon, Lock, 
-  Plus, MoreVertical, Download, 
-  Settings, X, ShieldCheck, UploadCloud
+  Folder, FileText, Lock, 
+  Plus, 
+  X, ShieldCheck, UploadCloud
 } from 'lucide-react';
 import { generateId, encryptData, decryptData } from './lib/crypto';
 
@@ -53,7 +53,7 @@ export default function App() {
         setFiles(data.files);
       }
     } catch (e) {
-      console.error("Failed to fetch metadata");
+      console.error("Failed to fetch metadata", e);
     }
   };
 
