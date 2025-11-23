@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { db } from './db';
+import { db } from '/lib/db';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // 1. Check Auth Cookie
